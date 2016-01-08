@@ -27,7 +27,7 @@ namespace Senparc.Weixin.Helpers
             FileStream fileStream = null;
             if (!string.IsNullOrEmpty(fileName) && File.Exists(fileName))
             {
-                fileStream = new FileStream(fileName, FileMode.Open);
+                fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
             }
             return fileStream;
         }
